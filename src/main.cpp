@@ -29,12 +29,28 @@
 #include "systemInfo.h"
 
 void setup() {
-    // Setup function
-
     Serial.begin(SERIAL_BAUD_RATE);
+
+    // Setup left motor.
+    pinMode(LEFT_MOTOR_DIRECTION_PIN, OUTPUT);
+    pinMode(LEFT_MOTOR_SPEED_PIN, OUTPUT);
+    pinMode(LEFT_MOTOR_ENCODER_A_PIN, INPUT);
+    pinMode(LEFT_MOTOR_ENCODER_B_PIN, INPUT);
+
+    // Setup right motor.
+    pinMode(RIGHT_MOTOR_DIRECTION_PIN, OUTPUT);
+    pinMode(RIGHT_MOTOR_SPEED_PIN, OUTPUT);
+    pinMode(RIGHT_MOTOR_ENCODER_A_PIN, INPUT);
+    pinMode(RIGHT_MOTOR_ENCODER_B_PIN, INPUT);
 }
 
 void loop() {
-    // Main loop
-    Serial.println("Hello, World!");
+    Serial.print(" ENC1A:");
+    Serial.print(digitalRead(LEFT_MOTOR_ENCODER_A_PIN));
+    Serial.print(" ENC1B:");
+    Serial.print(digitalRead(LEFT_MOTOR_ENCODER_B_PIN));
+    Serial.print(" ENC2A:");
+    Serial.print(digitalRead(RIGHT_MOTOR_ENCODER_A_PIN));
+    Serial.print(" ENC2B:");
+    Serial.println(digitalRead(RIGHT_MOTOR_ENCODER_B_PIN));
 }
