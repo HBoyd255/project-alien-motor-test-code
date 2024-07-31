@@ -1,4 +1,4 @@
-# Project Alien Motor Test Code
+# Project A.L.I.E.N. Motor Test Code
 
 <!-- Harry Boyd - 29/07/2024 - github.com/hboyd255 -->
 
