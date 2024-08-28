@@ -56,8 +56,6 @@ void setup() {
     Serial.begin(SERIAL_BAUD_RATE);
 
     // Setup left motor encoders.
-    pinMode(LEFT_MOTOR_DIRECTION_PIN, OUTPUT);
-    pinMode(LEFT_MOTOR_SPEED_PIN, OUTPUT);
     pinMode(LEFT_MOTOR_ENCODER_A_PIN, INPUT);
     pinMode(LEFT_MOTOR_ENCODER_B_PIN, INPUT);
 
@@ -66,8 +64,6 @@ void setup() {
     pinMode(LEFT_MOTOR_SPEED_PIN, OUTPUT);
 
     // Setup right motor encoders.
-    pinMode(RIGHT_MOTOR_DIRECTION_PIN, OUTPUT);
-    pinMode(RIGHT_MOTOR_SPEED_PIN, OUTPUT);
     pinMode(RIGHT_MOTOR_ENCODER_A_PIN, INPUT);
     pinMode(RIGHT_MOTOR_ENCODER_B_PIN, INPUT);
 
